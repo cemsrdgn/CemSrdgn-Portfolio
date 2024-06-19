@@ -1,8 +1,7 @@
-/** @type {import('postcss-load-config').Config} */
-const config = {
-  plugins: {
-    tailwindcss: {},
-  },
-};
+const { PHASE_PRODUCTION_BUILD } = require('next/constants');
 
-export default config;
+module.exports = {
+  reactStrictMode: true,
+  basePath: '',
+  assetPrefix: process.env.NODE_ENV === PHASE_PRODUCTION_BUILD ? '/cemsrdgn.github.io/' : '',
+};
