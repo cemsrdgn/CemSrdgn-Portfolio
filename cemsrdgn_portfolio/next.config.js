@@ -5,3 +5,9 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
+module.exports = {
+    images: {
+        // Disable image optimization during export
+        unoptimized: true,
+    },
+};
